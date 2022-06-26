@@ -57,7 +57,7 @@ export const validateMiddleware = (req: Request) => {
     value,
     nestedErrors,
   }: ValidationError) => {
-    return `{"${param}": "${msg}"}`;
+    return `${msg}`;
   };
   const result = validationResult(req).formatWith(errorFormatter);
 

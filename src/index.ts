@@ -5,6 +5,7 @@ import express, {
   ErrorRequestHandler,
 } from "express";
 import morgan from "morgan";
+import cors from "cors";
 import dotenv from "dotenv";
 import { donerRouter } from "./routers/doner.router";
 import db from "../models/"; // not error it's cause of src is the root dir
@@ -14,7 +15,8 @@ dotenv.config();
 
 const { SERVER_PORT } = process.env;
 const app = express();
-app.use(morgan("dev"));
+app.use(cors({}));
+app.use(morgan("tiny"));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 

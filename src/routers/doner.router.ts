@@ -45,7 +45,7 @@ const donerDonate = async (
   try {
     const virusTest: string = req.body.virusTest;
     const doner: doner = await Doner(req.body.nationalId);
-    if (virusTest == "negative") {
+    if (virusTest == "positive") {
       sendEmail(<option>{
         from: "Blood Bank",
         to: doner.email,
@@ -71,7 +71,7 @@ const donerDonate = async (
     const data: donation = <donation>matchedData(req);
     data.DonerId = doner.id;
     await donate(data);
-    return res.status(200).json({
+    return res.status(201).json({
       success: "you Donation is accepted",
     });
   } catch (err) {

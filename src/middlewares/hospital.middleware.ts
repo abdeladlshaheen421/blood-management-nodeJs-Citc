@@ -12,7 +12,7 @@ const isValidRequestNumber = async (HospitalId: Number) => {
 export const validateRequest = [
   body("bloodType")
     .isIn(["A+", "B+", "AB+", "O+", "A-", "B-", "AB-", "O-"])
-    .withMessage("enter a valid blood type"),
+    .withMessage("please enter a valid blood type"),
   body("city").isAlpha().withMessage("please enter a valid city name"),
   body("quantity")
     .isInt({ min: 1 })
@@ -25,5 +25,7 @@ export const validateRequest = [
     .withMessage("please enter an exist hospital")
     .bail()
     .custom(isValidRequestNumber)
-    .withMessage("you have reach max number of request (10) requests"),
+    .withMessage(
+      "Sorry This Hospital has reached max number of requests (10) requests"
+    ),
 ];

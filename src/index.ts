@@ -14,7 +14,7 @@ import { hospitalRouter } from "./routers/hospital.router";
 dotenv.config();
 
 const { SERVER_PORT } = process.env;
-const app = express();
+export const app = express();
 app.use(cors({}));
 app.use(morgan("tiny"));
 app.use(express.json());

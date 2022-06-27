@@ -5,9 +5,10 @@
   "main": "index.ts",
   "scripts": {
     "start": "nodemon ./src/index.ts",
+    "tsc": "tsc",
     "jasmine": "jasmine",
     "build": "npx tsc",
-    "test": "npm run build && npm run jasmine"
+    "test": "npm run build && jasmine"
   },
   "author": "abdeladl shaheen",
   "license": "ISC",
@@ -21,6 +22,7 @@
     "@types/node": "^18.0.0",
     "@types/nodemailer": "^6.4.4",
     "@types/sequelize": "^4.28.13",
+    "@types/supertest": "^2.0.12",
     "express-validator": "^6.14.2",
     "jasmine": "^4.2.1",
     "jasmine-spec-reporter": "^7.0.0",
@@ -37,6 +39,7 @@
     "mysql": "^2.18.1",
     "mysql2": "^2.3.3",
     "nodemailer": "^6.7.5",
-    "sequelize": "^6.21.0"
+    "sequelize": "^6.21.0",
+    "supertest": "^6.2.3"
   }
 }

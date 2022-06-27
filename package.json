@@ -4,7 +4,10 @@
   "description": "api project for blood bank management",
   "main": "index.ts",
   "scripts": {
-    "start": "nodemon ./src/index.ts"
+    "start": "nodemon ./src/index.ts",
+    "jasmine": "jasmine",
+    "build": "npx tsc",
+    "test": "npm run build && npm run jasmine"
   },
   "author": "abdeladl shaheen",
   "license": "ISC",

@@ -8,18 +8,20 @@
 
 ### <strong>Prepare your database using `mysql ` server</strong>
 
-* `create user 'username'@'hostname' identified by 'userpassword';`
+- `create user 'username'@'hostname' identified by 'userpassword';`
 
-* `create database bloodbank;`
+- `create database bloodbank;`
 
-* `grant all privileges on bloodbank.* to 'username'@'hostname';`
+- `grant all privileges on bloodbank.* to 'username'@'hostname';`
 
-- install dependencies `npm i ` or `npm install`
+* install dependencies `npm i ` or `npm install`
 
-- make `.env` file like `.env-example` with your own Data
+* make `.env` file like `.env-example` with your own Data
 
-- to build project `npm run build`
+* to build project `npm run build`
 
-- to run project `npm start`
+* to append all hospitals of system go to hospital controller and uncomment `migrateHospitals()` for the first time to migrate all Hospitals.
 
-- automatically it will migrate all migration files
+* to run project `npm start`
+
+* automatically it will migrate all migration files

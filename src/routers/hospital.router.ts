@@ -38,6 +38,7 @@ const getHospitals = async (
     next(err);
   }
 };
+
 export const hospitalRouter = (app: Application): void => {
   app.post("/makeRequest", validateRequest, makeRequest);
   app.get("/hospitals", getHospitals);
